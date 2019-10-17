@@ -1,0 +1,17 @@
+.jumbortron 1 {
+	padding
+}
+
+  .container {
+    padding-bottom: 100px;
+    padding-top: 40px;
+  }
+
+  .carousel-item {
+    padding-bottom: 20px;
+    padding-top: 50px;
+  }
+
+  .footer {
+  	padding-top: 50px;
+  }
