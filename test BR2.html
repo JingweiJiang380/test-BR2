@@ -12,11 +12,27 @@
     <link rel="stylesheet" href="test BR2.css">
 
     <title>Hello, Best run!</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+     <!-- <link rel="stylesheet" href="map.css"> -->
   </head>
+
+  <html>
+   <head>
+   	<title>my map</title>
+   	<script scr ="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+   	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet'">
+   	<link rel="stylesheet" href="map.css">
+   </head>
+   <body>
+   	<script src="map.js"></script>
+   </body>
+  </html>
 
 
   <body>
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">BEST RUN</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,17 +48,17 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Discover more
+          Sign in or sign up
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Report</a>
-          <a class="dropdown-item" href="#">Communities</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">About us</a>
+          <a class="dropdown-item" href="#">Sign in</a>
+          <a class="dropdown-item" href="#">Sign up</a>
+          <div class="dropdown-divider">About us</div>
+          <a class="dropdown-item" href="#">Contact us</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign in or sign up</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Discover more</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -54,7 +70,7 @@
     
 <div class="jumbotron1">
   <div class="container">
-    <h4 class="display-4">Visiting more popular sites!</h4>
+    <h4 class="display-4">Visiting more popular places!</h4>
     <p class="lead">This is the most popular running site members would like to visit recently.</p>
   </div>
 </div>
@@ -64,7 +80,7 @@
   <div class="row">
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-        <img src="http://landezine.com/wp-content/uploads/2011/06/sant-en-co-landscapearchitecture-01-300x300.jpg" class="card-img-top" alt="...">
+        <img src="http://landezine.com/wp-content/uploads/2011/06/sant-en-co-landscapearchitecture-13-300x300.jpg" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">Site 1</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -101,17 +117,19 @@
 <div class="jumbotron2">
   <div class="container">
     <h4 class="display-4">See members' routes and reviews</h4>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="lead">Click "view route" to see the map.</p>
   </div>
 </div>
 
 
 <div class="card-columns">
   <div class="card">
-    <img src="https://www.thisiscolossal.com/wp-content/uploads/2013/07/map-3.jpg" class="card-img-top" alt="...">
+    <img id="pic1" src="pics/Capture1.jpg" class="card-img-top" alt="...">
     <div class="card-body">
+      <!-- <div id="map"></div> -->
       <h5 class="card-title">Route 1</h5>
       <p class="card-text">Running route shared by Jack. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <a href="#" class="btn btn-warning">View route</a>
     </div>
   </div>
   <div class="card p-3">
@@ -125,11 +143,14 @@
     </blockquote>
   </div>
   <div class="card">
-    <img src="https://www.thisiscolossal.com/wp-content/uploads/2013/07/map-2.jpg" class="card-img-top" alt="...">
+    <img id="pic2" src="pics/Capture2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
+      <!-- div id="map"></div> -->
       <h5 class="card-title">Route 2</h5>
       <p class="card-text">Running route shared by Lily. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <a href="#" class="btn btn-warning">View route</a>
+
     </div>
   </div>
   <div class="card bg-warning text-white text-center p-3">
@@ -143,14 +164,17 @@
     </blockquote>
   </div>
   <div class="card text-center">
+    <img id="pic2" src="pics/Capture3.jpg" class="card-img-center" alt="...">
     <div class="card-body">
+      <!-- <img id="pic2" src="pics/Capture3.jpg" class="card-img-center" alt="..."> -->
       <h5 class="card-title">Route 3</h5>
       <p class="card-text">Running route shared by June. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <a href="#" class="btn btn-warning">View route</a>
     </div>
   </div>
   <div class="card">
-    <img src="https://www.thisiscolossal.com/wp-content/uploads/2013/07/map-1.jpg" class="card-img-top" alt="...">
+    <img id="pic3" src="pics/Capture3.jpg" class="card-img-center" alt="...">
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
@@ -167,31 +191,32 @@
       <h5 class="card-title">Route 4</h5>
       <p class="card-text">Running route shared by Jack. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <a href="#" class="btn btn-warning">View route</a>
     </div>
   </div>
 </div>
 
 
-<footer>
+<footer1>
   <div class="row">
     <div class="col-8">
-    	<p class="col-sm-4"> &copy; 2019. Best Run.</p>
+      <p class="col-sm-4"> &copy; 2019. Best Run.</p>
     </div>
 
     <div class="col-1">
-      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg" alt="10px" class="rounded-sm">
+      <img id= "image1" src="file:///C:/Users/lemonhope929/Downloads/twitter-social-media-svgrepo-com.svg" alt="1px" class="rounded-sm" height="20px">
     </div>
     <div class="col-1">
-      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg" alt="10px" class="rounded-sm">
+      <img src="file:///C:/Users/lemonhope929/Downloads/facebook-svgrepo-com.svg" alt="1px" class="rounded-sm" height="20px">
     </div>
     <div class="col-1">
-      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg" alt="10px" class="rounded-sm">
+      <img src="file:///C:/Users/lemonhope929/Downloads/instagram-logo-svgrepo-com.svg" alt="1px" class="rounded-sm" height="20px">
     </div>
     <div class="col-1">
-      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg" alt="10px" class="rounded-sm">
+      <img src="file:///C:/Users/lemonhope929/Downloads/snapchat-social-media-svgrepo-com.svg" alt="1px" class="rounded-sm" height="20px">
     </div>
   </div>
-</footer>
+</footer1>
   
 
     
@@ -203,4 +228,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+  <script src="map.js"></script>
 </html>
