@@ -7010,10 +7010,6 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 50px !important;
 }
 
-.footer 
-  padding-top: 100px !important;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -7060,3 +7056,16 @@ body {
     padding-top: 80px;
   }
 
+  #title {
+    font-family: 'Staatliches', cursive;
+  }
+
+  #title1 {
+    font-family: 'Marvel', sans-serif;
+  }
+#name {
+  font-family: 'Dancing Script', cursive;
+}
+#saying {
+  font-family: 'Pompiere', cursive;
+}
